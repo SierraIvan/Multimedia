@@ -1,47 +1,195 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ivan Sierra Pérez</title>
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Script para boton subir -->
+    <script>
+      // Función para animar el scroll a las secciones
+      function scrollToSection(sectionId) {
+        document
+          .getElementById(sectionId)
+          .scrollIntoView({ behavior: "smooth" });
+      }
+
+      // Función para mostrar el botón de "scroll to top"
+      window.onscroll = function () {
+        const topButton = document.getElementById("scrollTopButton");
+        if (
+          document.body.scrollTop > 300 ||
+          document.documentElement.scrollTop > 300
+        ) {
+          topButton.style.display = "block";
+        } else {
+          topButton.style.display = "none";
+        }
+      };
+
+      // Función para volver al inicio
+      function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+    </script>
   </head>
-  <body class="bg-blue-950">
-    <!--Pagina de inicio -->
-    <section class="text-center">
-      <img
-        src="fotocv.jpg"
-        class="rounded-full w-36 mx-auto mt-10 border-4 border-blue-800"
-      />
-      <h1
-        class="text-5xl text-blue-700 font-serif font-extrabold mt-16 tracking-widest shadow-md"
-      >
-        Ivan Sierra Perez
-      </h1>
-      <p
-        class="text-center text-base mt-8 text-gray-300 mx-10 leading-loose font-light font-serif"
-      >
-        Mi nombre es Ivan Sierra, actualmente estoy cursando el último año de
-        Desarrollo de Aplicaciones Multiplataforma, un grado superior con
-        numerosas salidas. Me apasiona la tecnología y la creación de
-        aplicaciones innovadoras.
-      </p>
-      <!-- Botones -->
-      <div class="flex justify-center gap-5 mt-16 mb-10">
-        <button class="bg-blue-600 text-white rounded-full px-6 py-3 text-lg">
-          Contactame
-        </button>
-        <button class="bg-blue-600 text-white rounded-full px-6 py-3 text-lg">
-          Descargar CV
-        </button>
+  <body
+    class="bg-gradient-to-r from-blue-900 to-blue-950 overflow-x-hidden text-white"
+  >
+    <!-- Menú de navegación -->
+    <nav class="fixed top-0 left-0 w-full bg-blue-800 py-4 shadow-lg z-50">
+      <div class="flex justify-center space-x-6">
+        <a
+          href="#About"
+          class="text-white hover:text-blue-300 cursor-pointer"
+          onclick="scrollToSection('About')"
+          >Sobre mí</a
+        >
+        <a
+          href="#Habilidades"
+          class="text-white hover:text-blue-300 cursor-pointer"
+          onclick="scrollToSection('Habilidades')"
+          >Habilidades</a
+        >
+        <a
+          href="#Proyectos"
+          class="text-white hover:text-blue-300 cursor-pointer"
+          onclick="scrollToSection('Proyectos')"
+          >Proyectos</a
+        >
+        <a
+          href="#Estudios"
+          class="text-white hover:text-blue-300 cursor-pointer"
+          onclick="scrollToSection('Estudios')"
+          >Estudios</a
+        >
       </div>
-    </section>
-    <!-- Abaut me    -->
-    <section class="text-center">
-      <h1
-        class="text-5xl text-blue-700 font-serif font-extrabold mt-16 tracking-widest shadow-md"
-      >
-        Sobre mi
-      </h1>
-    </section>
+    </nav>
+
+    <div class="pt-20">
+      <!-- Página de inicio -->
+      <section class="text-center">
+        <img
+          src="fotocv.jpg"
+          class="rounded-full w-36 h-36 mx-auto mt-10 border-4 border-blue-800 transition-transform duration-500 hover:scale-105"
+        />
+        <h1
+          class="text-5xl text-blue-300 font-serif font-extrabold mt-16 tracking-widest shadow-md w-auto md:max-w-xl md:mx-auto"
+        >
+          Ivan Sierra Pérez
+        </h1>
+        <p
+          class="text-center text-base mt-8 text-gray-300 mx-10 leading-loose font-light font-serif"
+        >
+          Mi nombre es Ivan Sierra, actualmente estoy cursando el último año de
+          Desarrollo de Aplicaciones Multiplataforma.
+        </p>
+
+        <!-- Botones -->
+        <div class="flex justify-center gap-5 mt-16 mb-10">
+          <button
+            class="bg-blue-600 text-white rounded-full px-6 py-3 text-lg transition-colors duration-300 hover:bg-blue-400"
+          >
+            Contáctame
+          </button>
+          <button
+            class="bg-blue-600 text-white rounded-full px-6 py-3 text-lg transition-colors duration-300 hover:bg-blue-400"
+          >
+            Descargar CV
+          </button>
+        </div>
+      </section>
+
+      <!-- Sobre mí -->
+      <section id="About" class="text-center">
+        <h1
+          class="text-5xl text-blue-300 font-serif font-extrabold mt-16 tracking-widest shadow-md w-auto md:max-w-xl md:mx-auto"
+        >
+          Sobre mí
+        </h1>
+        <p
+          class="text-center text-base mt-8 text-gray-300 mx-10 leading-loose font-light font-serif"
+        >
+          Actualmente estoy estudiando un Grado Superior de Desarrollo de
+          Aplicaciones Multiplataforma. Soy un apasionado de la tecnología, algo
+          que me gusta desde pequeño.
+        </p>
+      </section>
+
+      <!-- Habilidades -->
+      <section id="Habilidades" class="text-center">
+        <h1
+          class="text-5xl text-blue-300 font-serif font-extrabold mt-16 tracking-widest shadow-md w-auto md:max-w-xl md:mx-auto"
+        >
+          Habilidades
+        </h1>
+        <div
+          class="grid grid-cols-2 grid-rows-3 px-3 gap-3 bg-slate-700 mx-4 mt-7 rounded-2xl animate-fadeIn"
+        >
+          <div
+            class="bg-blue-700 border border-blue-500 rounded-full text-center mt-3 mb-3 py-1"
+          >
+            JavaScript
+          </div>
+          <div
+            class="bg-blue-700 border border-blue-500 rounded-full text-center mt-3 mb-3 py-1"
+          >
+            Java
+          </div>
+          <div
+            class="bg-blue-700 border border-blue-500 rounded-full text-center mt-3 mb-3 py-1"
+          >
+            HTML
+          </div>
+          <div
+            class="bg-blue-700 border border-blue-500 rounded-full text-center mt-3 mb-3 py-1"
+          >
+            CSS
+          </div>
+          <div
+            class="bg-blue-700 border border-blue-500 rounded-full text-center mt-3 mb-3 py-1"
+          >
+            SQL
+          </div>
+          <div
+            class="bg-blue-700 border border-blue-500 rounded-full text-center mt-3 mb-3 py-1"
+          >
+            MongoDB
+          </div>
+        </div>
+      </section>
+
+      <!-- Proyectos -->
+      <section id="Proyectos" class="text-center">
+        <h1
+          class="text-5xl text-blue-300 font-serif font-extrabold mt-16 tracking-widest shadow-md"
+        >
+          Proyectos
+        </h1>
+        <div id="Estudios" class="md:grid md:grid-cols-2 md:gap-3 mt-10">
+          <div>
+            <h1 class="text-4xl text-blue-300 font-serif font-extrabold mt-10">
+              Estudios
+            </h1>
+          </div>
+          <div>
+            <h1 class="text-4xl text-blue-300 font-serif font-extrabold mt-10">
+              Experiencia
+            </h1>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Botón de "Scroll to top" -->
+    <button
+      id="scrollTopButton"
+      onclick="scrollToTop()"
+      class="fixed bottom-8 right-8 bg-blue-600 text-white rounded-full p-3 shadow-lg hover:bg-blue-400"
+      style="display: none"
+    >
+      ↑
+    </button>
   </body>
 </html>
