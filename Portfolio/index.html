@@ -69,13 +69,15 @@
 
     <div class="pt-20">
       <!-- Página de inicio -->
-      <section class="text-center">
+      <section
+        class="bg-blue-950 text-center tracking-widest shadow-md pb-5 mx-3 border-2 border-blue-400"
+      >
         <img
           src="fotocv.jpg"
           class="rounded-full w-36 h-36 mx-auto mt-10 border-4 border-blue-800 transition-transform duration-500 hover:scale-105"
         />
         <h1
-          class="text-5xl text-blue-300 font-serif font-extrabold mt-16 tracking-widest shadow-md w-auto md:max-w-xl md:mx-auto"
+          class="text-5xl text-blue-300 font-serif font-extrabold mt-16 w-auto md:max-w-xl md:mx-auto"
         >
           Ivan Sierra Pérez
         </h1>
@@ -87,17 +89,21 @@
         </p>
 
         <!-- Botones -->
-        <div class="flex justify-center gap-5 mt-16 mb-10">
+        <div class="flex justify-center gap-5 mt-16 mb-2">
           <button
-            class="bg-blue-600 text-white rounded-full px-6 py-3 text-lg transition-colors duration-300 hover:bg-blue-400"
+            class="bg-blue-600 text-white rounded-full px-3 text-lg transition-colors duration-300 hover:bg-blue-400"
           >
             Contáctame
           </button>
           <button
-            class="bg-blue-600 text-white rounded-full px-6 py-3 text-lg transition-colors duration-300 hover:bg-blue-400"
+            class="bg-blue-600 text-white rounded-full px-3 text-lg transition-colors duration-300 hover:bg-blue-400"
           >
             Descargar CV
           </button>
+        </div>
+        <div class="flex justify-center gap-5 mt-5">
+          <img src="github.png" alt="" class="w-10" />
+          <img src="linkedin.png" alt="" class="w-10" />
         </div>
       </section>
 
@@ -125,7 +131,7 @@
           Habilidades
         </h1>
         <div
-          class="grid grid-cols-2 grid-rows-3 px-3 gap-3 bg-slate-700 mx-4 mt-7 rounded-2xl animate-fadeIn"
+          class="grid grid-cols-3 px-3 gap-3 bg-slate-700 mx-4 mt-7 rounded-2xl animate-fadeIn border border-blue-600"
         >
           <div
             class="bg-blue-700 border border-blue-500 rounded-full text-center mt-3 mb-3 py-1"
@@ -140,6 +146,11 @@
           <div
             class="bg-blue-700 border border-blue-500 rounded-full text-center mt-3 mb-3 py-1"
           >
+            Phyton
+          </div>
+          <div
+            class="bg-blue-700 border border-blue-500 rounded-full text-center mt-3 mb-3 py-1"
+          >
             HTML
           </div>
           <div
@@ -150,12 +161,22 @@
           <div
             class="bg-blue-700 border border-blue-500 rounded-full text-center mt-3 mb-3 py-1"
           >
-            SQL
+            Tailwindcss
           </div>
           <div
             class="bg-blue-700 border border-blue-500 rounded-full text-center mt-3 mb-3 py-1"
           >
             MongoDB
+          </div>
+          <div
+            class="bg-blue-700 border border-blue-500 rounded-full text-center mt-3 mb-3 py-1"
+          >
+            SQL
+          </div>
+          <div
+            class="bg-blue-700 border border-blue-500 rounded-full text-center mt-3 mb-3 py-1"
+          >
+            Latex
           </div>
         </div>
       </section>
@@ -167,6 +188,40 @@
         >
           Proyectos
         </h1>
+        <div class="px-3 mt-5">
+          <div
+            class="bg-gradient-to-r from-slate-800 border border-blue-700 rounded-md mt-3"
+          >
+            <h1 class="text-2xl text-blue-300 font-bold mx-5 mt-2">
+              Simon Dice
+            </h1>
+            <p class="text-slate-200 mx-3 mb-3">
+              El mitico juego de simon dice con colores, programado en java.
+            </p>
+            <div class="w-auto my-3 text-center">
+              <a href="https://github.com/SierraIvan/SimonDice">
+                → Saber mas ←
+              </a>
+            </div>
+          </div>
+          <div
+            class="bg-gradient-to-r from-slate-800 border border-blue-700 rounded-md mt-3"
+          >
+            <h1 class="text-2xl text-blue-300 font-bold mx-5 mt-2">
+              Maquina virtual
+            </h1>
+            <p class="text-slate-200 mx-3 mb-3">
+              Un programa con distintas funcionalidades, programado en java.
+            </p>
+            <div class="w-auto my-3 text-center">
+              <a href="https://github.com/SierraIvan/MaquinaVirtual">
+                → Saber mas ←
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="Proyectos" class="text-center">
         <div id="Estudios" class="md:grid md:grid-cols-2 md:gap-3 mt-10">
           <div>
             <h1 class="text-4xl text-blue-300 font-serif font-extrabold mt-10">
@@ -182,7 +237,7 @@
       </section>
     </div>
 
-    <!-- Botón de "Scroll to top" -->
+    <!-- Botón de subir-->
     <button
       id="scrollTopButton"
       onclick="scrollToTop()"
