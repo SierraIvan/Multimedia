@@ -1,5 +1,7 @@
 ---
-
+import Habilidades from "../components/habilidades.astro";
+import Cuadros from "../components/Cuadros.astro";
+import CuadrosPeques from "../components/CuadrosPeques.astro";
 ---
 
 <!doctype html>
@@ -175,51 +177,16 @@
           <div
             class="grid grid-cols-3 px-3 gap-3 bg-gray-100 dark:bg-gray-800 mx-4 mt-7 rounded-2xl animate-fadeIn border border-blue-300 dark:border-blue-700 dark:text-white xl:mx-48"
           >
-            <div
-              class="bg-blue-200 dark:bg-blue-900 border border-blue-300 dark:border-blue-700 rounded-full text-center mt-3 mb-3 py-1 hover:scale-105"
-            >
-              JavaScript
-            </div>
-            <div
-              class="bg-blue-200 dark:bg-blue-900 border border-blue-300 dark:border-blue-700 rounded-full text-center mt-3 mb-3 py-1 hover:scale-105"
-            >
-              Java
-            </div>
-            <div
-              class="bg-blue-200 dark:bg-blue-900 border border-blue-300 dark:border-blue-700 rounded-full text-center mt-3 mb-3 py-1 hover:scale-105"
-            >
-              Phyton
-            </div>
-            <div
-              class="bg-blue-200 dark:bg-blue-900 border border-blue-300 dark:border-blue-700 rounded-full text-center mt-3 mb-3 py-1 hover:scale-105"
-            >
-              HTML
-            </div>
-            <div
-              class="bg-blue-200 dark:bg-blue-900 border border-blue-300 dark:border-blue-700 rounded-full text-center mt-3 mb-3 py-1 hover:scale-105"
-            >
-              CSS
-            </div>
-            <div
-              class="bg-blue-200 dark:bg-blue-900 border border-blue-300 dark:border-blue-700 rounded-full text-center mt-3 mb-3 py-1 hover:scale-105"
-            >
-              Tailwindcss
-            </div>
-            <div
-              class="bg-blue-200 dark:bg-blue-900 border border-blue-300 dark:border-blue-700 rounded-full text-center mt-3 mb-3 py-1 hover:scale-105"
-            >
-              MongoDB
-            </div>
-            <div
-              class="bg-blue-200 dark:bg-blue-900 border border-blue-300 dark:border-blue-700 rounded-full text-center mt-3 mb-3 py-1 hover:scale-105"
-            >
-              SQL
-            </div>
-            <div
-              class="bg-blue-200 dark:bg-blue-900 border border-blue-300 dark:border-blue-700 rounded-full text-center mt-3 mb-3 py-1 hover:scale-105"
-            >
-              Latex
-            </div>
+            <Habilidades> JavaScript </Habilidades>
+            <Habilidades> Java </Habilidades>
+            <Habilidades>Phyton</Habilidades>
+
+            <Habilidades> HTML </Habilidades>
+            <Habilidades> CSS </Habilidades>
+            <Habilidades> Tailwindcss </Habilidades>
+            <Habilidades> MongoDB </Habilidades>
+            <Habilidades> SQL </Habilidades>
+            <Habilidades> Latex </Habilidades>
           </div>
         </section>
 
@@ -231,9 +198,7 @@
             Proyectos
           </h1>
           <div class="px-3 mt-5">
-            <div
-              class="bg-gray-100 dark:bg-gray-800 border border-blue-300 dark:border-blue-700 rounded-md mt-3 hover:text-blue-700 dark:hover:text-blue-300 hover:border-purple-300 dark:hover:border-purple-800 xl:mx-64"
-            >
+            <Cuadros>
               <h2 class="text-xl font-serif text-blue-800 dark:text-white pt-2">
                 Simon Dice
               </h2>
@@ -245,10 +210,8 @@
                   → Saber mas ←
                 </a>
               </div>
-            </div>
-            <div
-              class="bg-gray-100 dark:bg-gray-800 border border-blue-300 dark:border-blue-700 rounded-md mt-3 hover:text-blue-700 dark:hover:text-blue-300 hover:border-purple-300 dark:hover:border-purple-800 xl:mx-64"
-            >
+            </Cuadros>
+            <Cuadros>
               <h2 class="text-xl font-serif text-blue-800 dark:text-white pt-2">
                 Maquina virtual
               </h2>
@@ -260,7 +223,7 @@
                   → Saber mas ←
                 </a>
               </div>
-            </div>
+            </Cuadros>
           </div>
         </section>
 
@@ -274,9 +237,7 @@
                 Estudios
               </h1>
               <div class="px-3 mt-5">
-                <div
-                  class="bg-gray-100 dark:bg-gray-800 border border-blue-300 dark:border-blue-700 rounded-md mt-3 xl:mx-28"
-                >
+                <CuadrosPeques>
                   <h2
                     class="text-xl font-serif text-blue-800 dark:text-white pt-2"
                   >
@@ -288,10 +249,8 @@
                     <br />
                     9/22 - 6/24
                   </p>
-                </div>
-                <div
-                  class="bg-gray-100 dark:bg-gray-800 border border-blue-300 dark:border-blue-700 rounded-md mt-3 xl:mx-28"
-                >
+                </CuadrosPeques>
+                <CuadrosPeques>
                   <h2
                     class="text-xl font-serif text-blue-800 dark:text-white pt-2"
                   >
@@ -303,7 +262,7 @@
                     Aranjuez <br />
                     9/24 - actualidad
                   </p>
-                </div>
+                </CuadrosPeques>
               </div>
             </div>
             <div class="px-3">
@@ -313,9 +272,7 @@
                 Experiencia
               </h1>
               <div class="px-3 mt-5">
-                <div
-                  class="bg-gray-100 dark:bg-gray-800 border border-blue-300 dark:border-blue-700 rounded-md mt-3 xl:mx-28"
-                >
+                <CuadrosPeques>
                   <h2
                     class="text-xl font-serif text-blue-800 dark:text-white pt-2"
                   >
@@ -324,7 +281,7 @@
                   <p class="font-light text-gray-600 dark:text-gray-300 p-2">
                     3/23 - 6/23
                   </p>
-                </div>
+                </CuadrosPeques>
               </div>
             </div>
           </div>
