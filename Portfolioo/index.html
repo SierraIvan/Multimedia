@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ivan Sierra Pérez</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class", // Habilitar modo oscuro basado en la clase
+      };
+
+      // Función para alternar entre modo oscuro y claro
+      function toggleDarkMode() {
+        const body = document.body;
+        body.classList.toggle("dark");
+        localStorage.setItem(
+          "theme",
+          body.classList.contains("dark") ? "dark" : "light"
+        );
+      }
+
+      // Guardar la preferencia de tema
+      window.onload = function () {
+        const theme = localStorage.getItem("theme");
+        if (theme === "dark") {
+          document.body.classList.add("dark");
+        }
+      };
+
+      // Función para animar el scroll a las secciones
+      function scrollToSection(sectionId) {
+        document
+          .getElementById(sectionId)
+          .scrollIntoView({ behavior: "smooth" });
+      }
+
+      // Función para mostrar el botón de "scroll to top"
+      window.onscroll = function () {
+        const topButton = document.getElementById("scrollTopButton");
+        if (
+          document.body.scrollTop > 300 ||
+          document.documentElement.scrollTop > 300
+        ) {
+          topButton.style.display = "block";
+        } else {
+          topButton.style.display = "none";
+        }
+      };
+
+      // Función para volver al inicio
+      function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+    </script>
+  </head>
+  <body>
+    <div
+      class="bg-gradient-to-r from-blue-100 to-blue-200 dark:bg-gradient-to-r dark:from-blue-900 dark:to-blue-950 text-blue-900 dark:text-white"
+    >
+      <!-- Menú de navegación -->
+      <nav
+        class="fixed top-0 left-0 w-full bg-blue-300 dark:bg-blue-900 py-4 shadow-lg z-50"
+      >
+        <div class="flex justify-center space-x-6">
+          <a
+            href="#About"
+            class="text-blue-900 dark:text-white hover:text-blue-700 dark:hover:text-blue-300 cursor-pointer"
+            onclick="scrollToSection('About')"
+            >Sobre mí</a
+          >
+          <a
+            href="#Habilidades"
+            class="text-blue-900 dark:text-white hover:text-blue-700 dark:hover:text-blue-300 cursor-pointer"
+            onclick="scrollToSection('Habilidades')"
+            >Habilidades</a
+          >
+          <a
+            href="#Proyectos"
+            class="text-blue-900 dark:text-white hover:text-blue-700 dark:hover:text-blue-300 cursor-pointer"
+            onclick="scrollToSection('Proyectos')"
+            >Proyectos</a
+          >
+          <a
+            href="#Estudios"
+            class="text-blue-900 dark:text-white hover:text-blue-700 dark:hover:text-blue-300 cursor-pointer"
+            onclick="scrollToSection('Estudios')"
+            >Estudios</a
+          >
+        </div>
+        <div class="absolute right-4 top-2">
+          <button
+            onclick="toggleDarkMode()"
+            class="bg-blue-500 dark:bg-gray-800 text-white px-3 mt-14 md:mt-0 py-1 rounded-full transition duration-300 hover:bg-blue-400 dark:hover:bg-gray-600"
+          >
+            Modo Claro/Oscuro
+          </button>
+        </div>
+      </nav>
+
+      <div class="pt-20">
+        <!-- Página de inicio -->
+        <section
+          class="bg-white dark:bg-gray-800 text-center tracking-widest shadow-md pb-5 mx-3 border-2 border-blue-300 dark:border-blue-700 xl:mx-48"
+        >
+          <img
+            src="fotos/fotocv.jpg"
+            class="rounded-full w-36 h-36 mx-auto mt-10 border-4 border-blue-400 dark:border-blue-700 transition-transform duration-500 hover:scale-105"
+          />
+          <h1
+            class="text-5xl text-blue-700 dark:text-blue-300 font-serif font-extrabold mt-16 w-auto md:max-w-xl md:mx-auto"
+          >
+            Ivan Sierra Pérez
+          </h1>
+          <p
+            class="text-center text-base mt-8 text-gray-700 dark:text-gray-300 mx-10 leading-loose font-light font-serif"
+          >
+            Mi nombre es Ivan Sierra, actualmente estoy cursando el último año
+            de Desarrollo de Aplicaciones Multiplataforma.
+          </p>
+
+          <!-- Botones -->
+          <div class="flex justify-center gap-5 mt-16 mb-2">
+            <button
+              class="bg-blue-500 dark:bg-blue-700 text-white rounded-full px-3 text-lg transition-colors duration-300 hover:bg-blue-400 dark:hover:bg-blue-600"
+            >
+              Contáctame
+            </button>
+            <button
+              class="bg-blue-500 dark:bg-blue-700 text-white rounded-full px-3 text-lg transition-colors duration-300 hover:bg-blue-400 dark:hover:bg-blue-600"
+            >
+              Descargar CV
+            </button>
+          </div>
+          <div class="flex justify-center gap-5 mt-5">
+            <a href="https://github.com/SierraIvan" target="_blank"
+              ><img src="fotos/github.png" alt="GitHub" class="w-10"
+            /></a>
+            <a
+              href="https://www.linkedin.com/in/iv%C3%A1n-sierra-perez-089965273/"
+              target="_blank"
+              ><img src="fotos/linkedin.png" alt="LinkedIn" class="w-10"
+            /></a>
+          </div>
+        </section>
+
+        <!-- Sobre mí -->
+        <section id="About" class="text-center">
+          <h1
+            class="text-5xl text-blue-700 dark:text-blue-300 font-serif font-extrabold mt-16 tracking-widest shadow-md w-auto md:max-w-xl md:mx-auto"
+          >
+            Sobre mí
+          </h1>
+          <p
+            class="text-center text-base mt-8 text-gray-700 dark:text-gray-300 mx-10 leading-loose font-light font-serif"
+          >
+            ¡Hola! Soy Iván Sierra Pérez, un desarrollador apasionado con un
+            enfoque especial en el desarrollo de aplicaciones multiplataforma.
+            Actualmente estoy cursando mi último año de estudios en este campo,
+            lo que me ha permitido consolidar y poner en práctica mis
+            conocimientos en tecnologías clave como Java, JavaScript, MongoDB y
+            frameworks modernos como TailwindCSS.
+            <br />
+            ¿Qué me caracteriza? Un compromiso con la calidad, la colaboración
+            en equipo, y la búsqueda constante de nuevos desafíos. Me encanta
+            aprender nuevas tecnologías y aplicar mis conocimientos en proyectos
+            prácticos, desde pequeñas aplicaciones hasta soluciones complejas.
+          </p>
+        </section>
+
+        <!-- Habilidades -->
+        <section id="Habilidades" class="text-center">
+          <h1
+            class="text-5xl text-blue-700 dark:text-blue-300 font-serif font-extrabold mt-16 tracking-widest shadow-md w-auto md:max-w-xl md:mx-auto"
+          >
+            Habilidades
+          </h1>
+          <div
+            class="grid grid-cols-3 px-3 gap-3 bg-gray-100 dark:bg-gray-800 mx-4 mt-7 rounded-2xl animate-fadeIn border border-blue-300 dark:border-blue-700 dark:text-white xl:mx-48"
+          >
+            <div
+              class="bg-blue-200 dark:bg-blue-900 border border-blue-300 dark:border-blue-700 rounded-full text-center mt-3 mb-3 py-1 hover:scale-105"
+            >
+              JavaScript
+            </div>
+            <div
+              class="bg-blue-200 dark:bg-blue-900 border border-blue-300 dark:border-blue-700 rounded-full text-center mt-3 mb-3 py-1 hover:scale-105"
+            >
+              Java
+            </div>
+            <div
+              class="bg-blue-200 dark:bg-blue-900 border border-blue-300 dark:border-blue-700 rounded-full text-center mt-3 mb-3 py-1 hover:scale-105"
+            >
+              Phyton
+            </div>
+            <div
+              class="bg-blue-200 dark:bg-blue-900 border border-blue-300 dark:border-blue-700 rounded-full text-center mt-3 mb-3 py-1 hover:scale-105"
+            >
+              HTML
+            </div>
+            <div
+              class="bg-blue-200 dark:bg-blue-900 border border-blue-300 dark:border-blue-700 rounded-full text-center mt-3 mb-3 py-1 hover:scale-105"
+            >
+              CSS
+            </div>
+            <div
+              class="bg-blue-200 dark:bg-blue-900 border border-blue-300 dark:border-blue-700 rounded-full text-center mt-3 mb-3 py-1 hover:scale-105"
+            >
+              Tailwindcss
+            </div>
+            <div
+              class="bg-blue-200 dark:bg-blue-900 border border-blue-300 dark:border-blue-700 rounded-full text-center mt-3 mb-3 py-1 hover:scale-105"
+            >
+              MongoDB
+            </div>
+            <div
+              class="bg-blue-200 dark:bg-blue-900 border border-blue-300 dark:border-blue-700 rounded-full text-center mt-3 mb-3 py-1 hover:scale-105"
+            >
+              SQL
+            </div>
+            <div
+              class="bg-blue-200 dark:bg-blue-900 border border-blue-300 dark:border-blue-700 rounded-full text-center mt-3 mb-3 py-1 hover:scale-105"
+            >
+              Latex
+            </div>
+          </div>
+        </section>
+
+        <!-- Proyectos -->
+        <section id="Proyectos" class="text-center">
+          <h1
+            class="text-5xl text-blue-700 dark:text-blue-300 font-serif font-extrabold mt-14 tracking-widest shadow-md"
+          >
+            Proyectos
+          </h1>
+          <div class="px-3 mt-5">
+            <div
+              class="bg-gray-100 dark:bg-gray-800 border border-blue-300 dark:border-blue-700 rounded-md mt-3 hover:text-blue-700 dark:hover:text-blue-300 hover:border-purple-300 dark:hover:border-purple-800 xl:mx-64"
+            >
+              <h2 class="text-xl font-serif text-blue-800 dark:text-white pt-2">
+                Simon Dice
+              </h2>
+              <p class="font-light text-gray-600 dark:text-gray-300 p-2">
+                El mitico juego de simon dice con colores, programado en java.
+              </p>
+              <div class="w-auto my-3 text-center">
+                <a href="https://github.com/SierraIvan/SimonDice">
+                  → Saber mas ←
+                </a>
+              </div>
+            </div>
+            <div
+              class="bg-gray-100 dark:bg-gray-800 border border-blue-300 dark:border-blue-700 rounded-md mt-3 hover:text-blue-700 dark:hover:text-blue-300 hover:border-purple-300 dark:hover:border-purple-800 xl:mx-64"
+            >
+              <h2 class="text-xl font-serif text-blue-800 dark:text-white pt-2">
+                Maquina virtual
+              </h2>
+              <p class="font-light text-gray-600 dark:text-gray-300 p-2">
+                Un programa con distintas funcionalidades, programado en java.
+              </p>
+              <div class="w-auto my-3 text-center">
+                <a href="https://github.com/SierraIvan/MaquinaVirtual">
+                  → Saber mas ←
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Estudios -->
+        <section id="Estudios" class="text-center">
+          <div class="grid grid-cols-1 md:grid-cols-2 md:gap-3 my-10">
+            <div class="px-3">
+              <h1
+                class="text-5xl text-blue-700 dark:text-blue-300 font-serif font-extrabold tracking-widest shadow-md"
+              >
+                Estudios
+              </h1>
+              <div class="px-3 mt-5">
+                <div
+                  class="bg-gray-100 dark:bg-gray-800 border border-blue-300 dark:border-blue-700 rounded-md mt-3 xl:mx-28"
+                >
+                  <h2
+                    class="text-xl font-serif text-blue-800 dark:text-white pt-2"
+                  >
+                    Tecnico en Sistemas Microinformaticos y Redes
+                  </h2>
+                  <p class="font-light text-gray-600 dark:text-gray-300 p-2">
+                    Titulo de Grado Medio, cursado en Colegio Litterator en
+                    Aranjuez
+                    <br />
+                    9/22 - 6/24
+                  </p>
+                </div>
+                <div
+                  class="bg-gray-100 dark:bg-gray-800 border border-blue-300 dark:border-blue-700 rounded-md mt-3 xl:mx-28"
+                >
+                  <h2
+                    class="text-xl font-serif text-blue-800 dark:text-white pt-2"
+                  >
+                    Tecnico Superior en Desarrollo de Aplicaciones
+                    Multiplataforma
+                  </h2>
+                  <p class="font-light text-gray-600 dark:text-gray-300 p-2">
+                    Titulo de Grado Superior, cursado en Colegio Litterator en
+                    Aranjuez <br />
+                    9/24 - actualidad
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="px-3">
+              <h1
+                class="text-5xl text-blue-700 dark:text-blue-300 font-serif font-extrabold tracking-widest shadow-md"
+              >
+                Experiencia
+              </h1>
+              <div class="px-3 mt-5">
+                <div
+                  class="bg-gray-100 dark:bg-gray-800 border border-blue-300 dark:border-blue-700 rounded-md mt-3 xl:mx-28"
+                >
+                  <h2
+                    class="text-xl font-serif text-blue-800 dark:text-white pt-2"
+                  >
+                    Ecomputer S.L
+                  </h2>
+                  <p class="font-light text-gray-600 dark:text-gray-300 p-2">
+                    3/23 - 6/23
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- Botón para volver arriba -->
+      <button
+        id="scrollTopButton"
+        class="fixed bottom-4 right-4 bg-blue-500 dark:bg-blue-700 text-white px-3 py-2 rounded-full shadow-lg hover:bg-blue-400 dark:hover:bg-blue-600"
+        style="display: none"
+        onclick="scrollToTop()"
+      >
+        ↑
+      </button>
+      <footer
+        class="bg-gray-800 bg-opacity-50 text-white text-center py-4 mt-10 border-t border-blue-500"
+      >
+        <p class="font-serif text-lg">
+          Email: ivan.sierra.perez@colegiolitterator.com
+        </p>
+        <p class="font-serif text-lg">Teléfono: 123 456 789</p>
+        <div class="flex justify-center gap-5 mt-5">
+          <a href="https://github.com/SierraIvan" target="_blank"
+            ><img
+              src="fotos/github.png"
+              alt="GitHub"
+              class="w-8 hover:opacity-80"
+          /></a>
+          <a
+            href="https://www.linkedin.com/in/iv%C3%A1n-sierra-perez-089965273/"
+            target="_blank"
+            ><img
+              src="fotos/linkedin.png"
+              alt="LinkedIn"
+              class="w-8 hover:opacity-80"
+          /></a>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

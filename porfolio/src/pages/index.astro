@@ -1,4 +1,8 @@
-<!DOCTYPE html>
+---
+import { useState, useEffect } from "react";
+---
+
+<!doctype html>
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
@@ -66,26 +70,22 @@
           <a
             href="#About"
             class="text-blue-900 dark:text-white hover:text-blue-700 dark:hover:text-blue-300 cursor-pointer"
-            onclick="scrollToSection('About')"
-            >Sobre mí</a
+            onclick="scrollToSection('About')">Sobre mí</a
           >
           <a
             href="#Habilidades"
             class="text-blue-900 dark:text-white hover:text-blue-700 dark:hover:text-blue-300 cursor-pointer"
-            onclick="scrollToSection('Habilidades')"
-            >Habilidades</a
+            onclick="scrollToSection('Habilidades')">Habilidades</a
           >
           <a
             href="#Proyectos"
             class="text-blue-900 dark:text-white hover:text-blue-700 dark:hover:text-blue-300 cursor-pointer"
-            onclick="scrollToSection('Proyectos')"
-            >Proyectos</a
+            onclick="scrollToSection('Proyectos')">Proyectos</a
           >
           <a
             href="#Estudios"
             class="text-blue-900 dark:text-white hover:text-blue-700 dark:hover:text-blue-300 cursor-pointer"
-            onclick="scrollToSection('Estudios')"
-            >Estudios</a
+            onclick="scrollToSection('Estudios')">Estudios</a
           >
         </div>
         <div class="absolute right-4 top-2">
@@ -104,7 +104,7 @@
           class="bg-white dark:bg-gray-800 text-center tracking-widest shadow-md pb-5 mx-3 border-2 border-blue-300 dark:border-blue-700 xl:mx-48"
         >
           <img
-            src="fotocv.jpg"
+            src="fotos/fotocv.jpg"
             class="rounded-full w-36 h-36 mx-auto mt-10 border-4 border-blue-400 dark:border-blue-700 transition-transform duration-500 hover:scale-105"
           />
           <h1
@@ -134,13 +134,13 @@
           </div>
           <div class="flex justify-center gap-5 mt-5">
             <a href="https://github.com/SierraIvan" target="_blank"
-              ><img src="github.png" alt="GitHub" class="w-10"
-            /></a>
+              ><img src="fotos/github.png" alt="GitHub" class="w-10" /></a
+            >
             <a
               href="https://www.linkedin.com/in/iv%C3%A1n-sierra-perez-089965273/"
               target="_blank"
-              ><img src="linkedin.png" alt="LinkedIn" class="w-10"
-            /></a>
+              ><img src="fotos/linkedin.png" alt="LinkedIn" class="w-10" /></a
+            >
           </div>
         </section>
 
@@ -161,10 +161,10 @@
             conocimientos en tecnologías clave como Java, JavaScript, MongoDB y
             frameworks modernos como TailwindCSS.
             <br />
-            ¿Qué me caracteriza? Un compromiso con la calidad, la colaboración
-            en equipo, y la búsqueda constante de nuevos desafíos. Me encanta
-            aprender nuevas tecnologías y aplicar mis conocimientos en proyectos
-            prácticos, desde pequeñas aplicaciones hasta soluciones complejas.
+            ¿Qué me caracteriza? Un compromiso con la calidad, la colaboración en
+            equipo, y la búsqueda constante de nuevos desafíos. Me encanta aprender
+            nuevas tecnologías y aplicar mis conocimientos en proyectos prácticos,
+            desde pequeñas aplicaciones hasta soluciones complejas.
           </p>
         </section>
 
@@ -352,16 +352,21 @@
         <p class="font-serif text-lg">Teléfono: 123 456 789</p>
         <div class="flex justify-center gap-5 mt-5">
           <a href="https://github.com/SierraIvan" target="_blank"
-            ><img src="github.png" alt="GitHub" class="w-8 hover:opacity-80"
-          /></a>
+            ><img
+              src="fotos/github.png"
+              alt="GitHub"
+              class="w-8 hover:opacity-80"
+            /></a
+          >
           <a
             href="https://www.linkedin.com/in/iv%C3%A1n-sierra-perez-089965273/"
             target="_blank"
             ><img
-              src="linkedin.png"
+              src="fotos/linkedin.png"
               alt="LinkedIn"
               class="w-8 hover:opacity-80"
-          /></a>
+            /></a
+          >
         </div>
       </footer>
     </div>
