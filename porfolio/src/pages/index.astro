@@ -1,5 +1,5 @@
 ---
-import { useState, useEffect } from "react";
+
 ---
 
 <!doctype html>
@@ -8,13 +8,10 @@ import { useState, useEffect } from "react";
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ivan Sierra Pérez</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        darkMode: "class", // Habilitar modo oscuro basado en la clase
-      };
-
-      // Función para alternar entre modo oscuro y claro
+  </head>
+  <body>
+    <script client:load>
+      // Alternar el modo oscuro
       function toggleDarkMode() {
         const body = document.body;
         body.classList.toggle("dark");
@@ -24,11 +21,13 @@ import { useState, useEffect } from "react";
         );
       }
 
-      // Guardar la preferencia de tema
+      // Mantener la preferencia de tema al cargar la página
       window.onload = function () {
         const theme = localStorage.getItem("theme");
         if (theme === "dark") {
           document.body.classList.add("dark");
+        } else {
+          document.body.classList.remove("dark");
         }
       };
 
@@ -57,8 +56,6 @@ import { useState, useEffect } from "react";
         window.scrollTo({ top: 0, behavior: "smooth" });
       }
     </script>
-  </head>
-  <body>
     <div
       class="bg-gradient-to-r from-blue-100 to-blue-200 dark:bg-gradient-to-r dark:from-blue-900 dark:to-blue-950 text-blue-900 dark:text-white"
     >
@@ -104,7 +101,7 @@ import { useState, useEffect } from "react";
           class="bg-white dark:bg-gray-800 text-center tracking-widest shadow-md pb-5 mx-3 border-2 border-blue-300 dark:border-blue-700 xl:mx-48"
         >
           <img
-            src="fotos/fotocv.jpg"
+            src="fotocv.jpg"
             class="rounded-full w-36 h-36 mx-auto mt-10 border-4 border-blue-400 dark:border-blue-700 transition-transform duration-500 hover:scale-105"
           />
           <h1
@@ -134,12 +131,12 @@ import { useState, useEffect } from "react";
           </div>
           <div class="flex justify-center gap-5 mt-5">
             <a href="https://github.com/SierraIvan" target="_blank"
-              ><img src="fotos/github.png" alt="GitHub" class="w-10" /></a
+              ><img src="github.png" alt="GitHub" class="w-10" /></a
             >
             <a
               href="https://www.linkedin.com/in/iv%C3%A1n-sierra-perez-089965273/"
               target="_blank"
-              ><img src="fotos/linkedin.png" alt="LinkedIn" class="w-10" /></a
+              ><img src="linkedin.png" alt="LinkedIn" class="w-10" /></a
             >
           </div>
         </section>
@@ -353,7 +350,7 @@ import { useState, useEffect } from "react";
         <div class="flex justify-center gap-5 mt-5">
           <a href="https://github.com/SierraIvan" target="_blank"
             ><img
-              src="fotos/github.png"
+              src="github.png"
               alt="GitHub"
               class="w-8 hover:opacity-80"
             /></a
@@ -362,7 +359,7 @@ import { useState, useEffect } from "react";
             href="https://www.linkedin.com/in/iv%C3%A1n-sierra-perez-089965273/"
             target="_blank"
             ><img
-              src="fotos/linkedin.png"
+              src="linkedin.png"
               alt="LinkedIn"
               class="w-8 hover:opacity-80"
             /></a
