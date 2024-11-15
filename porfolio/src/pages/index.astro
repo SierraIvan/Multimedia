@@ -11,6 +11,7 @@ import CuadrosPeques from "../components/CuadrosPeques.astro";
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ivan Sierra Pérez</title>
   </head>
+
   <body>
     <script client:load>
       // Alternar el modo oscuro
@@ -90,9 +91,10 @@ import CuadrosPeques from "../components/CuadrosPeques.astro";
         <div class="absolute right-4 top-2">
           <button
             onclick="toggleDarkMode()"
-            class="bg-blue-500 dark:bg-gray-800 text-white px-3 mt-14 md:mt-0 py-1 rounded-full transition duration-300 hover:bg-blue-400 dark:hover:bg-gray-600"
+            class="bg-blue-500 dark:bg-gray-800 text-white px-3 mt-14 md:mt-0 py-1 rounded-full"
           >
-            Modo Claro/Oscuro
+            <img src="luna.png" class="w-8 hidden dark:block" />
+            <img src="soleado.png" class="w-8 block dark:hidden" />
           </button>
         </div>
       </nav>
@@ -180,7 +182,6 @@ import CuadrosPeques from "../components/CuadrosPeques.astro";
             <Habilidades> JavaScript </Habilidades>
             <Habilidades> Java </Habilidades>
             <Habilidades>Phyton</Habilidades>
-
             <Habilidades> HTML </Habilidades>
             <Habilidades> CSS </Habilidades>
             <Habilidades> Tailwindcss </Habilidades>
