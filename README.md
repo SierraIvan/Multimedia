@@ -2,18 +2,18 @@ Bienvenido al repositorio de la asignatura **Multiplataforma**.
 
 Los proyectos son los siguientes:
 
-  -**Porfolio**:
-  Mi porfolio contiene:
-       Proyectos Destacados
-          [Simon Dice]: El mitico juego de Simon Dice con colores
-          Tecnologías: [Java]
-          [Maquina virtual]: Una maquina virtual con una serie de comandos
-          Tecnologías: [Java]
-        🛠️ Habilidades
-          Lenguajes: HTML, CSS, JavaScript, Python, LaTeX
-          Frameworks y herramientas: Tailwind CSS, React, Django, Git
-          Otras: Diseño responsivo, Metodologías ágiles
-        📬 Contacto
+  -**Porfolio**:<br>
+  Mi porfolio contiene:<br>
+       Proyectos Destacados:<br>
+          [Simon Dice]: El mitico juego de Simon Dice con colores<br>
+          Tecnologías: [Java]<br>
+          [Maquina virtual]: Una maquina virtual con una serie de comandos<br>
+          Tecnologías: [Java]<br>
+        🛠️ Habilidades<br>
+          Lenguajes: HTML, CSS, JavaScript, Python, LaTeX<br>
+          Frameworks y herramientas: Tailwind CSS, React, Django, Git<br>
+          Otras: Diseño responsivo, Metodologías ágiles<br>
+        📬 Contacto<br>
           Correo: [ivan.sierra.perez@colegiolitterator.com]
 
 
