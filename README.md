@@ -14,9 +14,7 @@ Los proyectos son los siguientes:
           Frameworks y herramientas: Tailwind CSS, React, Django, Git
           Otras: Diseño responsivo, Metodologías ágiles
         📬 Contacto
-          Correo: [tu_email@example.com]
-          LinkedIn: Enlace a tu perfil
-          Portafolio: Enlace a tu web o sitio
+          Correo: [ivan.sierra.perez@colegiolitterator.com]
 
 
         
